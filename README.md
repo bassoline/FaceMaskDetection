@@ -14,9 +14,9 @@ It is best to follow along with AlexeyAB's repo found [here](https://github.com/
 
 To train from scratch you will need to download the weights for either [YoloV3](https://pjreddie.com/media/files/darknet53.conv.74) or [YoloV4](https://drive.google.com/open?id=1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp). 
 
-To use the weights from my traing set you can find the YoloV3 wegihts [here]() and YoloV4 weights [here](). 
+To use the weights from my traing set you can find the YoloV3 weights [here](https://drive.google.com/file/d/1-MU044HqsE97e779T1INn3nZ8C71CRkZ/view?usp=sharing) and YoloV4 weights [here](https://drive.google.com/file/d/1Y50u8HiL-veZlvNg1ynhX2RnQc96wd0R/view?usp=sharing). 
 
-You will also need to download the test data, a zip of it can be found [here]() 
+You will also need to download the test data, a zip of it can be found [here](https://www.dropbox.com/s/6gewe947ake1g95/kaggle_and_no-mask_dataset.zip?dl=1) 
 
 Once you have everything downloaded - you can just update the file paths I already have in the folders yolov(3/4). For example the yolov3-face_mask-setup.data file, it references everything from darknet, so make sure the file references are based on that.  
 
