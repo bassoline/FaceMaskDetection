@@ -29,6 +29,28 @@ I.e: this was what I used based on my file locations, they will need to be updat
 ```
 
 ### Config files 
+
+The following descriptions are based on the OpenCV Course 2 material you can get course information [here](https://opencv.org/courses/#:~:text=AI%20Courses%20by%20OpenCV.%201%20Atanas%20Rogachev.%20Senior,4%20Leo%20Quiroa.%205%20Ikbel%20Boulabiar.%20More%20items)
+
+#### Batch 
+"When the batch size is set to 64, it means 64 images are used in one iteration to update the parameters of the neural network."
+#### Subdivisions
+"Even though you may want to use a batch size of 64 for training your neural network, you may not have a GPU with enough memory to use a batch size of 64. Fortunately, Darknet allows you to specify a variable called subdivisions that lets you process a fraction of the batch size at one time on your GPU."
+#### Momentum
+"Momentum is used to penalize large weight changes between iterations." 
+#### Decay 
+"One of the ways to mitigate this(over fitting) problem is to penalize large value for weights. The parameter decay controls this penalty term."
+#### Learning Rate/Steps/burn_in/Scale
+"The parameter learning rate controls how aggressively we should learn based on the current batch of data. Typically this is a number between 0.01 and 0.0001."
+
+At the beginning of the training process, we are starting with very generic information so the learning rate should be high. As the neural network sees more data, the weights should change less aggressively hence, the learning rate should decrease over time. In the configuration file, this decrease in learning rate is accomplished by first specifying that our learning rate decreasing policy is steps. The learning rate will start from 0.001 and remain constant for 1000 iterations (burn_in), and then it will multiply by scales to get the new learning rate.
+
+Even though the learning rate should be high in the beginning and low later on - it has been found that the training speed tends to increase if we have a lower learning rate for a short period of time at the very beginning. This is controlled by the burn_in parameter. 
+
+#### Data Augmentation (angle/saturation/exposure/hue)
+Quality data can be hard to come by and labeling the data is time consuming so we can use Darknet's built in data augmentation to change the image slightly in order to make our predictions more robust. 
+
+#### YoloV3 Config
 For YoloV3 the config parameters were set to
 
 ```
@@ -54,6 +76,7 @@ scales=.1,.1,.1
 
 The batch size was set to 16 by default from the OpenCV Course - I left it as is. Possibly changing it to 64 may have helped with accuracy. Width and height were both increased to 608 to improve the accuracy. Also updating the angle to 10 also helped improve the accuracy. I had to set the max_batch to 10000 as I was not getting great results with YoloV3 and it needed extra time to train - also that is why I manually set the steps to such high numbers to slow down the training and hopefully improve the accuracy.
 
+#### YoloV4 Config
 For YoloV4 I changed the training config parameters
 
 ```
