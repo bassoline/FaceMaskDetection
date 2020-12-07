@@ -1,5 +1,5 @@
 # FaceMaskDetection
-Face Mask Detection using YoloV3 and YoloV4
+Face Mask Detection using YoloV3 and YoloV4 - video outputs can be found [here](https://youtu.be/zqjLuRhJHkI) 
 
 ### Papers 
 [YoloV3](https://arxiv.org/abs/1506.02640) 
