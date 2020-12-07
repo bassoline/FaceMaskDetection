@@ -1,0 +1,5 @@
+classes = 2
+train = ../FaceMask_Code/face_mask_data_train.txt
+valid = ../FaceMask_Code/face_mask_data_test.txt
+names = ../FaceMask_Code/class.names
+backup = ../FaceMask_Code/yolov4/backup/
