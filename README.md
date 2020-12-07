@@ -7,4 +7,4 @@ Face Mask Detection using YoloV3 and YoloV4
 [YoloV4](https://arxiv.org/abs/2004.10934) 
 
 ### About 
-All training was done using Google Colab's GPUs, details about what GPU are available in the log files
+All training was done using Google Colab's GPUs, details about what GPU was used are available in the log files
